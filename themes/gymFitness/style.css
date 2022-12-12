@@ -76,7 +76,17 @@ img {
 }
  
 /* ====== Utilities ====== */
+.text-center {
+  text-align: center;
+}
 
+.text-primary {
+  color: var(--primary);
+}
+
+.section {
+  padding: 5rem 0;
+}
 
 
 /* ====== Header ====== */
@@ -149,6 +159,22 @@ img {
   background: transparent;
   color: var(--primary);
 }
+
+ 
+/* ====== Page Template ====== */
+.featured-image {
+  margin-bottom: 3rem;
+}
+.page h1 {
+  margin-bottom: 4rem;
+}
+.page.no-sidebars {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+ 
+ 
+ 
  
 /* ====== Media Queries ====== */
 @media(min-width: 768px){
@@ -199,6 +225,18 @@ img {
   /*  Mobile Menu */
   .slicknav_menu {
     display: none;
+  }
+
+  /*  Page with sidebars */
+  .page.with-sidebar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .with-sidebar .page-content {
+    flex: 0 0 calc(60% - 2rem);
+  }
+  .with-sidebar .sidebar {
+    flex: 0 0 calc(40% - 2rem);
   }
   
 } /*  Media queries end */
