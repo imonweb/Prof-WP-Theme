@@ -18,12 +18,25 @@ get_header(); ?>
       // echo "</pre>";
     ?>
 
-    <ul class="gallery">
+    <ul class="gallery-images">
       <?php 
+        $i = 0;
         foreach($gallery_images_ids as $id):
-          $image = wp_get_attachment_image_src( $id, 'square' ); ?>
-          <img src="<?php echo $image[0]; ?>" alt="">
-      <?php endforeach;
+          $size = ($i === 3 || $i == 6) ?  'portrait' : 'square';
+          // $image = wp_get_attachment_image_src( $id, 'square' ); 
+          $imageThumb = wp_get_attachment_image_src( $id, $size ); 
+          // $image = wp_get_attachment_image_src( $id, $size ); 
+          $image = wp_get_attachment_image_src( $id, 'large' ); 
+          // echo $i;
+      ?>
+          <a href="<?php echo $image[0]; ?>" data-lightbox="gallery">
+            <!-- <img src="<?php //echo $image[0]; ?>" alt=""> -->
+            <img src="<?php echo $imageThumb[0]; ?>" alt="">
+            <?php
+              // echo basename(get_page_template());
+              ?>
+          </a>
+      <?php $i++; endforeach;
       ?>
     </ul>
 
