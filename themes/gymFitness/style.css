@@ -212,6 +212,34 @@ p.content-class {
 }
  
  
+/* ====== Sidebar ====== */
+.sidebar a {
+  color: var(--black);
+}
+.sidebar .widget {
+  margin-bottom: 2rem;
+}
+.sidebar-class {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.sidebar .sidebar-widget-image {
+  flex: 0 0 30%;
+}
+.sidebar .class-content {
+  flex: 0 0 calc(70% - 2rem);
+}
+.sidebar .class-content p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.sidebar .classes-header {
+  margin-bottom: 2rem;
+}
+ 
+ 
 /* ====== Media Queries ====== */
 @media(min-width: 768px){
   .navigation-bar {
