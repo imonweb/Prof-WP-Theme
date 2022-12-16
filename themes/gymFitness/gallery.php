@@ -29,6 +29,7 @@ get_header(); ?>
           $image = wp_get_attachment_image_src( $id, 'large' ); 
           // echo $i;
       ?>
+        <li>
           <a href="<?php echo $image[0]; ?>" data-lightbox="gallery">
             <!-- <img src="<?php //echo $image[0]; ?>" alt=""> -->
             <img src="<?php echo $imageThumb[0]; ?>" alt="">
@@ -36,6 +37,7 @@ get_header(); ?>
               // echo basename(get_page_template());
               ?>
           </a>
+        </li>
       <?php $i++; endforeach;
       ?>
     </ul>
