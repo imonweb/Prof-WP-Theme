@@ -293,7 +293,74 @@ p.content-class {
   grid-column: 1 / 2;
   grid-row: 4 / 6;
 }
+
  
+/* ====== Contact Form ====== */
+.wpcf7-form p {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wpcf7-form p label,
+.wpcf7-form p span {
+  flex: 0 0 100%;
+}
+
+.wpcf7-form p span {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wpcf7-form-control {
+  flex: 0 0 100%;
+  border: 1px solid var(--lightGray);
+  padding: 1rem;
+}
+
+.wpcf7-submit {
+  background-color: var(--primary);
+  font-size: 2rem;
+  font-family: var(--mainFont);
+  color: var(--white);
+  padding: 1.2rem;
+}
+
+.wpcf7-submit:hover {
+  cursor: pointer;
+}
+
+ 
+/* div.wpcf7-validation-errors { */
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output,
+  div.wpcf7-validation-errors {
+  border-color: red !important;
+  color: red;
+  text-align: center;
+}
+ 
+/* div.wpcf7 .ajax-loader { */
+.wpcf7-spinner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 4rem;
+  width: 4rem;
+}
+
+span.wpcf7-not-valid-tip {
+  background-color: red;
+  color: var(--white);
+  padding: 1rem;
+}
+
+/* div.wpcf7-mail-sent-ok { */
+.wpcf7 form.sent .wpcf7-response-output {
+  background-color: green;
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
  
  
 /* ====== Media Queries ====== */
