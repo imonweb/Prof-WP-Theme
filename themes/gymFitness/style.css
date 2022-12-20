@@ -204,10 +204,35 @@ img {
 }
 
 .card .card-content .date-published {
-  color: var(--white);
+  color: var(--black);
 }
 .card .card-content .date-published span {
   color: var(--primary);
+}
+
+ 
+/* ====== Categories ====== */
+.post-categories {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+ 
+.post-categories li {
+  margin-right: 2rem;
+}
+
+.post-categories li:last-of-type {
+  margin-right: 0;
+}
+
+.post-categories a {
+  border-radius: .5rem;
+  color: var(--white);
+  background-color: var(--primary);
+  padding: 0.5rem 2rem;
+  font-size: 2.2rem;
+  font-family: var(--mainFont);
 }
  
 /* ====== Single class ====== */
@@ -391,7 +416,20 @@ p.content-class {
     grid-column: 2 / 3;
     grid-row: 2 / 4;
   }
-  
+
+  /*  categories */
+  .card .card-content .date-published {
+    color: var(--white);
+  }
+
+  .post-categories {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    margin-top: 0;
+    z-index: 2;
+  }
+    
 } /*  Media queries end */
  
  
