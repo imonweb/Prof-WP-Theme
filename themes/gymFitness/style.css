@@ -362,6 +362,13 @@ span.wpcf7-not-valid-tip {
 }
 
  
+/* ====== Map ====== */
+#map {
+  height: 300px;
+}
+ 
+
+ 
  
 /* ====== Media Queries ====== */
 @media(min-width: 768px){
