@@ -81,3 +81,29 @@ function gymfitness_widgets(){
 
 add_action('widgets_init', 'gymfitness_widgets');
  
+
+/* ====== Display the Hero image on background of the front-page ====== */
+function gymfitness_hero_image(){
+  $front_page_id = get_option('page_on_front');
+  $image_id = get_field('hero_image', $front_page_id );
+
+  $image = $image_id['url'];
+
+  // echo "<pre>";
+  // var_dump($image_id['url']);
+  // echo "</pre>";
+
+  // Create a "FALSE" stylesheet
+  wp_register_style('custom', false);
+  wp_enqueue_style('custom');
+
+  $feature_image_css = "
+    .site-header {
+      background-image: linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.75) ), url( $image );
+    }
+  ";
+  wp_add_inline_style('custom', $feature_image_css);
+}
+
+add_action('init', 'gymfitness_hero_image');
+ 

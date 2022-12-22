@@ -107,6 +107,15 @@ body.home .site-header {
   min-height: 65rem; /*  650px */
   padding-top: 2rem;
 }
+
+.tagline {
+  color: var(--white);
+  margin-top: 10rem;
+}
+
+.tagline p {
+  font-size: 2rem;
+}
  
 
 /* ====== Menu ====== */
@@ -412,7 +421,20 @@ span.wpcf7-not-valid-tip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    height: 100%;
   }
+
+  body.home .navigation-bar {
+    grid-column: 1 / 5;
+  }
+
+  .tagline {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    margin-top: 0;
+  }
+
+  /*  Front Header end here */
 
   .footer-menu .menu li {
     margin-right: 2rem;
