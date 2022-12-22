@@ -100,6 +100,8 @@ function gymfitness_hero_image(){
   $feature_image_css = "
     .site-header {
       background-image: linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.75) ), url( $image );
+      background-repeat: no-repeat;
+      
     }
   ";
   wp_add_inline_style('custom', $feature_image_css);
