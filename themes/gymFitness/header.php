@@ -7,7 +7,7 @@
   <?php wp_head(); ?>
   <!-- <title>Document</title> -->
 </head>
-<body>
+<body <?php body_class(); ?>>
   
 <header class="site-header">
   <div class="container header-grid">

@@ -100,6 +100,15 @@ img {
   justify-content: center;
 }
 
+ 
+/* ====== Front Header ====== */
+body.home .site-header {
+  height: 100vh;
+  min-height: 65rem; /*  650px */
+  padding-top: 2rem;
+}
+ 
+
 /* ====== Menu ====== */
 .main-menu {
   display: none;
@@ -396,6 +405,13 @@ span.wpcf7-not-valid-tip {
 
   .footer-menu .menu {
     display: flex;
+  }
+
+  /*  Front Header */
+  body.home .header-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
 
   .footer-menu .menu li {
