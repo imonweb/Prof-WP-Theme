@@ -565,6 +565,11 @@ span.wpcf7-not-valid-tip {
     align-items: center;
   }
 
+  .main-menu a {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+
   .main-menu li {
     margin-right: 2rem;
   }
