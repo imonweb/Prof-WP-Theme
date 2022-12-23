@@ -47,6 +47,8 @@
   </ul>
 </section>
 
+<!--========= Classes ==========-->
+
 <section class="classes-homepage">
   <div class="container section">
     <h2 class="text-primary text-center">Our Classes</h2>
@@ -59,6 +61,8 @@
   </div>
 </section>
 
+<!--========= Instructors ==========-->
+
 <section class="instructors">
   <div class="container section">
     <h2 class="text-center">Our Instructors</h2>
@@ -67,6 +71,58 @@
     <?php gymfitness_instructors_list(); ?>
   </div>
 </section>
+
+<!--========= Testimonials ==========-->
+
+<section class="testimonials">
+  <h2 class="text-center">Testimonials</h2>
+  <div class="container-testimonials">
+    <ul class="testimonials-list">
+      <?php 
+        $args = array(
+          'post_type' => 'testimonials',
+          'posts_per_page' => 10
+        );
+        $testimonials = new WP_Query($args);
+        while($testimonials->have_posts()): $testimonials->the_post();
+      ?>
+
+      <li class="testimonial text-center">
+        <blockquote>
+          <?php the_content(); ?>
+        </blockquote>
+
+        <footer class="testimonial-footer">
+          <?php the_post_thumbnail('thumbnail'); ?>
+          <p><?php the_title(); ?></p>
+        </footer>
+      </li>
+
+      <?php endwhile; wp_reset_postdata(); ?>
+    </ul>
+  </div>
+</section>
+
+<!--========= Blog Posts ==========-->
+<section class="blog container section">
+  <h2 class="text-center">Our Blog</h2>
+  <p class="text-center">Read our expert blog posts to achieve your goals.</p>
+
+  <ul class="blog-entries">
+    <?php 
+      $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 4
+      );
+      $blog = new WP_Query($args);
+      while($blog->have_posts()): $blog->the_post() 
+    ?>
+        <?php get_template_part('template-parts/blog', 'loop' ); ?>
+      <?php endwhile; wp_reset_postdata(); ?>
+  </ul>
+</section>
+
+
 
 <?php endwhile; ?>
 <?php get_footer(); ?>
